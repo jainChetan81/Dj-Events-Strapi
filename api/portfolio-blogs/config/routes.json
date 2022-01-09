@@ -1,0 +1,52 @@
+{
+	"routes": [
+		{
+			"method": "GET",
+			"path": "/portfolio-blogs",
+			"handler": "portfolio-blogs.find",
+			"config": {
+				"policies": []
+			}
+		},
+		{
+			"method": "GET",
+			"path": "/portfolio-blogs/count",
+			"handler": "portfolio-blogs.count",
+			"config": {
+				"policies": []
+			}
+		},
+		{
+			"method": "GET",
+			"path": "/portfolio-blogs/:id",
+			"handler": "portfolio-blogs.findOne",
+			"config": {
+				"policies": []
+			}
+		},
+		{
+			"method": "POST",
+			"path": "/portfolio-blogs",
+			"handler": "portfolio-blogs.create",
+			"config": {
+				"policies": []
+			}
+		},
+		{
+			"method": "PUT",
+			"path": "/portfolio-blogs/:id",
+			"handler": "portfolio-blogs.update",
+			"config": {
+				"policies": []
+			}
+		},
+		{
+			"method": "DELETE",
+			"path": "/portfolio-blogs/:id",
+			"handler": "portfolio-blogs.delete",
+			"config": {
+				"policies": []
+			}
+		}
+	]
+}

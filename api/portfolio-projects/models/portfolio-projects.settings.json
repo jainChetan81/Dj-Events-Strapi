@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_projects",
+  "info": {
+    "name": "Portfolio - Projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext",
+      "required": false,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "unique": true,
+      "maxLength": 20,
+      "minLength": 5,
+      "required": true
+    },
+    "summary": {
+      "type": "text",
+      "unique": true,
+      "minLength": 50,
+      "maxLength": 120,
+      "required": true
+    },
+    "displayImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "sliderImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date",
+      "unique": false
+    },
+    "rank": {
+      "type": "integer"
+    },
+    "githubUrl": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "externalUrl": {
+      "type": "string"
+    },
+    "technologies": {
+      "type": "json"
+    }
+  }
+}
